@@ -91,7 +91,7 @@ public final class EventSubscriber {
 	 * Helper method to determine if a block has an ItemBlock
 	 */
 	private static boolean hasItemBlock(@Nonnull final Block block) {
-		return true; //change this to return false if the block doesn’t have an ItemBlock
+		return true; //change this to return false if the block doesn't have an ItemBlock
 	}
 
 	/**
