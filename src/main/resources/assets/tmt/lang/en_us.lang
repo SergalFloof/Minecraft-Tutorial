@@ -1,0 +1,77 @@
+// Ore
+tile.ore_overworld_copper.name=Copper Ore
+tile.ore_end_copper.name=End Copper Ore
+tile.ore_nether_copper.name=Nether Copper Ore
+tile.air_ore.name=Air Ore
+tile.dark_ore.name=Dark Ore
+tile.earth_ore.name=Earth Ore
+tile.fire_ore.name=Fire Ore
+tile.light_ore.name=Light Ore
+tile.water_ore_sand.name=Water Sand Ore
+tile.water_ore_gravel.name=Water Gravel Ore
+
+// Blocks 
+tile.block_copper.name=Copper Block
+tile.air_block.name=Air Block
+tile.dark_block.name=Dark Block
+tile.earth_block.name=Earth Block
+tile.fire_block.name=Fire Block
+tile.light_block.name=Light Block
+tile.water_block.name=Water Block
+
+//Ingots
+item.ingot_copper.name=Copper Ingot
+item.air_ingot.name=Air Ingot
+item.dark_ingot.name=Dark Ingot
+item.earth_ingot.name=Earth Ingot
+item.fire_ingot.name=Fire Ingot
+item.light_ingot.name=Light Ingot
+item.water_ingot.name=Water Ingot
+
+//Nuggets
+item.air_nugget.name=Air Nugget
+item.dark_nugget.name=Dark Nugget
+item.earth_nugget.name=Earth Nugget
+item.fire_nugget.name=Fire Nugget
+item.light_nugget.name=Light Nugget
+item.water_nugget.name=Water Nugget
+
+//Decrotive Blocks
+tile.copper_stairs.name=Copper Stairs
+tile.copper_pressure_plate.name=Copper Pressure Plate
+tile.copper_button.name=Copper Button
+
+//Armor
+item.helmet_copper.name=Copper Helmet
+item.chestplate_copper.name=Copper Chestplate
+item.leggings_copper.name=Copper Leggings
+item.boots_copper.name=Copper Boots
+
+//Tools
+item.pickaxe_copper.name=Copper Pickaxe
+item.axe_copper.name=Copper Axe
+item.hoe_copper.name=Copper Hoe
+item.shovel_copper.name=Copper Shovel
+item.sword_copper.name=Copper Sword
+
+//Trees
+tile.planks_copper.name=Copper Planks
+tile.planks_aluminum.name=Aluminum Planks
+tile.logs_copper.name=Copper Log
+tile.logs_aluminum.name=Aluminum Log
+tile.leaves_copper.name=Copper Leaves
+tile.leaves_aluminum.name=Aluminum Leaves
+tile.saplings_copper.name=Copper Sapling
+tile.saplings_aluminum.name=Aluminum Sapling
+
+//WorldTypes
+generator.copper=Copper
+generator.custom=Tutorial
+
+entity.centaur.name=Centaur
+
+
+itemGroup.maintab=Main Tab
+
+tile.sintering_furnace.name=Sintering Furnace
+container.sintering_furnace=Sintering Furnace

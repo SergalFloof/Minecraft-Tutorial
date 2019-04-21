@@ -1,0 +1,9 @@
+{
+    "variants": {
+        "stage=0,variant=aluminum": { "model": "tmt:sapling_aluminum"},
+		"stage=0,variant=copper": { "model": "tmt:sapling_copper"},
+        
+        "stage=1,variant=aluminum": { "model": "tmt:sapling_aluminum" },
+		"stage=1,variant=copper": { "model": "tmt:sapling_copper" }
+    }
+}

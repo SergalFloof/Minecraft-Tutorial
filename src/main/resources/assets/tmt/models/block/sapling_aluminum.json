@@ -1,0 +1,6 @@
+{
+    "parent": "block/cross",
+    "textures": {
+        "cross": "tmt:blocks/sapling_aluminum"
+    }
+}

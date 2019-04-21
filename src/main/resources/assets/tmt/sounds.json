@@ -1,0 +1,6 @@
+{
+    "record.doctor": {"subtitle": "record.doctor", "sounds": [{"name": "tmt:record/doctor","stream": true}]},
+    "entity.centaur.ambient": {"subtitle": "entity.centaur.ambient", "sounds": [{"name": "tmt:entity/centaur/ambient","stream": true}]},
+    "entity.centaur.hurt": {"subtitle": "entity.centaur.hurt", "sounds": [{"name": "tmt:entity/centaur/hurt","stream": true}]},
+    "entity.centaur.death": {"subtitle": "entity.centaur.death", "sounds": [{"name": "tmt:entity/centaur/death","stream": true}]}
+}

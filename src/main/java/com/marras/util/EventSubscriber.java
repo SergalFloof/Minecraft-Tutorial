@@ -2,6 +2,7 @@ package com.marras.util;
 
 import com.google.common.base.Preconditions;
 import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
 import net.minecraft.crash.CrashReport;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
@@ -41,7 +42,7 @@ public final class EventSubscriber {
 	@SubscribeEvent
 	public static void onRegisterBlocksEvent(@Nonnull final RegistryEvent.Register<Block> event) {
 		event.getRegistry().registerAll(
-			setup(new Block(null), "example_block")
+			setup(new Block(Material.ROCK), "example_block")
 		);
 
 		LOGGER.debug("Registered blocks");
@@ -68,12 +69,16 @@ public final class EventSubscriber {
 	/**
 	 * This method will be called by Forge when it is time for the mod to register its items.
 	 * This method will always be called after the block registry method.
+	 * Normal = setup(new Item(), "example_item")
+	 * Normal with tab = setup(new Item().setCreativeTab(tab), "registry_name")
+	 * Custom = setup(new ItemCustomItem(), "custom_item")
 	 */
 	@SubscribeEvent
 	public static void onRegisterItemsEvent(@Nonnull final RegistryEvent.Register<Item> event) {
 		final IForgeRegistry<Item> registry = event.getRegistry();
 		registry.registerAll(
-			setup(new Item(), "example_item")
+			setup(new Item(), "ingot_copper")
+			
 		);
 
 		ForgeRegistries.BLOCKS.getValuesCollection().stream()
@@ -120,7 +125,7 @@ public final class EventSubscriber {
 //				.build()
 //		);
 
-		LOGGER.debug("Registered entities");
+//		LOGGER.debug("Registered entities");
 
 	}
 

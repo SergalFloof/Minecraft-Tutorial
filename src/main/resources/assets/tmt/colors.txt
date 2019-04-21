@@ -1,0 +1,18 @@
+Water Ore  7FFFD4
+Fire Ore   830303
+Air Ore    87CEEB
+Earth Ore  422910
+Light Ore  {
+AF8E77 > FFE766
+BC9980 > ffe975
+D8AF93 > ffeb84
+E2C0AA > ffee93
+}
+Dark Ore   {
+AF8E77 > 000000
+BC9980 > 191919
+D8AF93 > 323232
+E2C0AA > 4c4c4c
+}
+
+Dark Stone 1F1F1F
