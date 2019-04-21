@@ -41,7 +41,7 @@ public final class EventSubscriber {
 	@SubscribeEvent
 	public static void onRegisterBlocksEvent(@Nonnull final RegistryEvent.Register<Block> event) {
 		event.getRegistry().registerAll(
-			setup(new Block(), "example_block")
+			setup(new Block(null), "example_block")
 		);
 
 		LOGGER.debug("Registered blocks");
@@ -76,8 +76,8 @@ public final class EventSubscriber {
 			setup(new Item(), "example_item")
 		);
 
-		ForgeRegistries.BLOCKS.getValues().stream()
-		.filter(block -> block.getRegistryName().getNamespace().equals(Reference.MODID))
+		ForgeRegistries.BLOCKS.getValuesCollection().stream()
+		.filter(block -> block.getRegistryName().getResourceDomain().equals(Reference.MODID))
 		.filter(EventSubscriber::hasItemBlock)
 		.forEach(block -> {
 				registry.register(setup(new ItemBlock(block), block.getRegistryName()));
@@ -149,10 +149,10 @@ public final class EventSubscriber {
 
 		entry.setRegistryName(registryName);
 		if (entry instanceof Block) {
-			((Block) entry).setTranslationKey(registryName.getResourceDomain() + "." + registryName.getResourcePath());
+			((Block) entry).setUnlocalizedName(registryName.getResourceDomain() + "." + registryName.getResourcePath());
 		}
 		if (entry instanceof Item) {
-			((Item) entry).setTranslationKey(registryName.getResourceDomain() + "." + registryName.getResourcePath());
+			((Item) entry).setUnlocalizedName(registryName.getResourceDomain() + "." + registryName.getResourcePath());
 		}
 		return entry;
 	}
