@@ -131,7 +131,7 @@ public final class EventSubscriber {
 	 * @return Returns the entry passed in
 	 */
 	@Nonnull
-	public static <T extends IForgeRegistryEntry> T setup(@Nonnull final T entry, @Nonnull final String resourceLocation) {
+	public static <T extends IForgeRegistryEntry<?>> T setup(@Nonnull final T entry, @Nonnull final String resourceLocation) {
 		return setup(entry, new ResourceLocation(resourceLocation));
 	}
 
@@ -142,7 +142,7 @@ public final class EventSubscriber {
 	 * @return Returns the entry passed in
 	 */
 	@Nonnull
-	public static <T extends IForgeRegistryEntry> T setup(@Nonnull final T entry, @Nonnull final ResourceLocation registryName) {
+	public static <V extends IForgeRegistryEntry<?>> V setup(@Nonnull final V entry, @Nonnull final ResourceLocation registryName) {
 
 		Preconditions.checkNotNull(entry, "entry to setup must not be null!");
 		Preconditions.checkNotNull(registryName, "registryName to assign must not be null!");
