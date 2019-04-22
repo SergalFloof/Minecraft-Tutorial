@@ -4,6 +4,7 @@ import com.google.common.base.Preconditions;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.crash.CrashReport;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.tileentity.TileEntity;
@@ -42,7 +43,7 @@ public final class EventSubscriber {
 	@SubscribeEvent
 	public static void onRegisterBlocksEvent(@Nonnull final RegistryEvent.Register<Block> event) {
 		event.getRegistry().registerAll(
-			setup(new Block(Material.ROCK), "example_block")
+			setup(new Block(Material.ROCK), "block_copper")
 		);
 
 		LOGGER.debug("Registered blocks");
@@ -77,7 +78,7 @@ public final class EventSubscriber {
 	public static void onRegisterItemsEvent(@Nonnull final RegistryEvent.Register<Item> event) {
 		final IForgeRegistry<Item> registry = event.getRegistry();
 		registry.registerAll(
-			setup(new Item(), "ingot_copper")
+			setup(new Item().setCreativeTab(CreativeTabs.MISC), "ingot_copper")
 			
 		);
 

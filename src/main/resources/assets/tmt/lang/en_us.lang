@@ -20,7 +20,7 @@ tile.light_block.name=Light Block
 tile.water_block.name=Water Block
 
 //Ingots
-item.ingot_copper.name=Copper Ingot
+item.tmt.ingot_copper.name=Copper Ingot
 item.air_ingot.name=Air Ingot
 item.dark_ingot.name=Dark Ingot
 item.earth_ingot.name=Earth Ingot
