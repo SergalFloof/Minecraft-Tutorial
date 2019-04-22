@@ -1,12 +1,10 @@
 package com.marras.objects.items;
 
+import com.marras.Main;
 import com.marras.init.ItemInit;
 import com.marras.util.IHasModel;
 
-import net.minecraft.client.renderer.block.model.ModelResourceLocation;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
-import net.minecraftforge.client.model.ModelLoader;
 
 public class ItemBase extends Item  implements IHasModel{
 
@@ -14,7 +12,7 @@ public class ItemBase extends Item  implements IHasModel{
 		
 		setUnlocalizedName(name);
 		setRegistryName(name);
-		setCreativeTab(CreativeTabs.MATERIALS);
+		setCreativeTab(Main.maintab);
 		
 		ItemInit.ITEMS.add(this);
 		
@@ -28,7 +26,7 @@ public class ItemBase extends Item  implements IHasModel{
 	}
 	
 	public void registerItemRenderer(Item item, int meta, String id) {
-		ModelLoader.setCustomModelResourceLocation(item, meta, new ModelResourceLocation(item.getRegistryName(), id));
+		Main.proxy.registerItemRenderer(this, 0, "Inventory");
 	}
 
 }

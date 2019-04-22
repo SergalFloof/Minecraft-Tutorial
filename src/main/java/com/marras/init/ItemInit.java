@@ -11,6 +11,6 @@ public class ItemInit {
 	
 	public static final List<Item> ITEMS = new ArrayList<Item>();
 	
-	public static final Item COPPER_INGOT = new ItemBase("ingot_copper");
+	public static final Item INGOT_COPPER = new ItemBase("ingot_copper");
 
 }
