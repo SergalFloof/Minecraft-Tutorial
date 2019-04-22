@@ -136,8 +136,8 @@ public final class EventSubscriber {
 	 * @return Returns the entry passed in
 	 */
 	@Nonnull
-	public static <T extends IForgeRegistryEntry<?>> T setup(@Nonnull final T entry, @Nonnull final String resourceLocation) {
-		return setup(entry, new ResourceLocation(resourceLocation));
+	public static <T extends IForgeRegistryEntry> T setup(@Nonnull final T entry, @Nonnull final String name) {
+	    return setup(entry, new ResourceLocation(Reference.MODID, name));
 	}
 
 	/**
