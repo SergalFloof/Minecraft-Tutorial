@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "tmt:ingot_copper",
+  "pattern": [
+    "#"
+  ],
+  "key": {
+    "#": {
+      "item": "tmt:block_copper"
+    }
+  },
+  "result": {
+    "item": "tmt:ingot_copper",
+    "count": 9
+  }
+}

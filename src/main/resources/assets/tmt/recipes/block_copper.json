@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "XXX",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "tmt:ingot_copper"
+    }
+  },
+  "result": {
+    "item": "tmt:block_copper"
+  }
+}
