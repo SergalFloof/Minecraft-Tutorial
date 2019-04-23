@@ -2,7 +2,7 @@ package com.marras.util.handlers;
 
 import com.marras.init.BlockInit;
 import com.marras.init.ItemInit;
-import com.marras.util.IHasModel;
+import com.marras.util.interfaces.IHasModel;
 
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;

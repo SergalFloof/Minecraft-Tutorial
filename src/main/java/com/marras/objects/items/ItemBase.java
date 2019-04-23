@@ -2,7 +2,7 @@ package com.marras.objects.items;
 
 import com.marras.Main;
 import com.marras.init.ItemInit;
-import com.marras.util.IHasModel;
+import com.marras.util.interfaces.IHasModel;
 
 import net.minecraft.item.Item;
 

@@ -5,7 +5,7 @@ import java.util.Set;
 import com.google.common.collect.Sets;
 import com.marras.Main;
 import com.marras.init.ItemInit;
-import com.marras.util.IHasModel;
+import com.marras.util.interfaces.IHasModel;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;

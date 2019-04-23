@@ -1,4 +1,4 @@
-package com.marras.util;
+package com.marras.util.interfaces;
 
 public interface IHasModel {
 	

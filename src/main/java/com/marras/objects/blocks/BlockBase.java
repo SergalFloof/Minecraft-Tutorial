@@ -1,9 +1,9 @@
 package com.marras.objects.blocks;
 
-import com.marras.util.IHasModel;
 import com.marras.Main;
 import com.marras.init.BlockInit;
 import com.marras.init.ItemInit;
+import com.marras.util.interfaces.IHasModel;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -26,13 +26,7 @@ public class BlockBase extends Block implements IHasModel
 	
 	@Override
 	public void registerModels() {
-		
-		registerItemRenderer(Item.getItemFromBlock(this), 0, "inventory");
-		
-	}
-
-	private void registerItemRenderer(Item itemFromBlock, int i, String string) {
-		// TODO Auto-generated method stub
+		Main.proxy.registerItemRenderer(Item.getItemFromBlock(this), 0, "Inventory");
 		
 	}
 
