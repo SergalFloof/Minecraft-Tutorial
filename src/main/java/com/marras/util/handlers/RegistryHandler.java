@@ -1,9 +1,11 @@
 package com.marras.util.handlers;
 
+import com.marras.init.BiomeInit;
 import com.marras.init.BlockInit;
 import com.marras.init.ItemInit;
 import com.marras.util.interfaces.IHasModel;
 import com.marras.world.gen.WorldGenCustomOres;
+import com.marras.world.gen.WorldGenCustomTrees;
 
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
@@ -56,7 +58,10 @@ public class RegistryHandler {
 	public static void otherRegistries() {
 		
 		GameRegistry.registerWorldGenerator(new WorldGenCustomOres(), 0);
+		GameRegistry.registerWorldGenerator(new WorldGenCustomTrees(), 0);
 		
+		BiomeInit.registerBiomes();
+
 		
 	}
 
