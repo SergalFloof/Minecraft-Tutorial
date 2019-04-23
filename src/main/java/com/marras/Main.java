@@ -3,6 +3,7 @@ package com.marras;
 import com.marras.proxy.CommonProxy;
 import com.marras.tabs.TutorialTab;
 import com.marras.util.Reference;
+import com.marras.util.handlers.RegistryHandler;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraftforge.fml.common.Mod;
@@ -23,7 +24,10 @@ public class Main
 	public static CommonProxy proxy;
 	
 	@EventHandler
-	public static void preInit(FMLPreInitializationEvent event) {}
+	public static void preInit(FMLPreInitializationEvent event) {
+		RegistryHandler.otherRegistries();
+		
+	}
 	
 	@EventHandler
 	public static void init(FMLInitializationEvent event) {}

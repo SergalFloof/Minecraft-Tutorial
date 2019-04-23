@@ -2,6 +2,9 @@
 tile.ore_overworld_copper.name=Copper Ore
 tile.ore_end_copper.name=End Copper Ore
 tile.ore_nether_copper.name=Nether Copper Ore
+tile.ore_overworld_aluminum.name=Aluminum Ore
+tile.ore_end_aluminum.name=End Aluminum Ore
+tile.ore_nether_aluminum.name=Nether Aluminum Ore
 tile.air_ore.name=Air Ore
 tile.dark_ore.name=Dark Ore
 tile.earth_ore.name=Earth Ore
