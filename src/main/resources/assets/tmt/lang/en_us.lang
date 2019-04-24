@@ -69,7 +69,7 @@ tile.saplings_aluminum.name=Aluminum Sapling
 
 //WorldTypes
 generator.copper=Copper
-generator.custom=Tutorial
+generator.custom=Custom
 
 entity.centaur.name=Centaur
 

@@ -6,9 +6,12 @@ import com.marras.init.ItemInit;
 import com.marras.util.interfaces.IHasModel;
 import com.marras.world.gen.WorldGenCustomOres;
 import com.marras.world.gen.WorldGenCustomTrees;
+import com.marras.world.types.WorldTypeCopper;
+import com.marras.world.types.WorldTypeCustom;
 
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
+import net.minecraft.world.WorldType;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
@@ -55,13 +58,20 @@ public class RegistryHandler {
 		
 	}
 	
-	public static void otherRegistries() {
+	public static void preInitRegistries() {
 		
 		GameRegistry.registerWorldGenerator(new WorldGenCustomOres(), 0);
 		GameRegistry.registerWorldGenerator(new WorldGenCustomTrees(), 0);
 		
 		BiomeInit.registerBiomes();
 
+		
+	}
+	
+	public static void postInitRegistries() {
+		
+		WorldType COPPER = new WorldTypeCopper();
+		WorldType CUSTOM = new WorldTypeCustom();
 		
 	}
 
