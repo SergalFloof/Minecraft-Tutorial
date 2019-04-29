@@ -8,5 +8,7 @@ public class Reference
 	
 	public static final String CLIENTPROXY = "com.marras.proxy.ClientProxy";
 	public static final String COMMONPROXY = "com.marras.proxy.CommonProxy";
+	
+	public static final int ENTITY_CENTAUR = 120;
 
 }

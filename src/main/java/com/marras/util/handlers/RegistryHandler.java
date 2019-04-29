@@ -1,5 +1,6 @@
 package com.marras.util.handlers;
 
+import com.marras.entity.EntityInit;
 import com.marras.init.BiomeInit;
 import com.marras.init.BlockInit;
 import com.marras.init.ItemInit;
@@ -64,10 +65,13 @@ public class RegistryHandler {
 		GameRegistry.registerWorldGenerator(new WorldGenCustomTrees(), 0);
 		
 		BiomeInit.registerBiomes();
+		EntityInit.registerEntity();
+		RenderHandler.registerEntityRenders();
 
 		
 	}
 	
+	@SuppressWarnings("unused")
 	public static void postInitRegistries() {
 		
 		WorldType COPPER = new WorldTypeCopper();
