@@ -72,7 +72,7 @@ generator.copper=Copper
 generator.custom=Custom
 
 entity.centaur.name=Centaur
-
+tile.santa_hat.name=Santa Hat
 
 itemGroup.maintab=Main Tab
 

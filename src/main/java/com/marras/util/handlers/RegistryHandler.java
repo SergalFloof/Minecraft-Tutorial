@@ -6,6 +6,7 @@ import com.marras.init.BlockInit;
 import com.marras.init.ItemInit;
 import com.marras.util.interfaces.IHasModel;
 import com.marras.world.gen.WorldGenCustomOres;
+import com.marras.world.gen.WorldGenCustomStructures;
 import com.marras.world.gen.WorldGenCustomTrees;
 import com.marras.world.types.WorldTypeCopper;
 import com.marras.world.types.WorldTypeCustom;
@@ -63,12 +64,17 @@ public class RegistryHandler {
 		
 		GameRegistry.registerWorldGenerator(new WorldGenCustomOres(), 0);
 		GameRegistry.registerWorldGenerator(new WorldGenCustomTrees(), 0);
+		GameRegistry.registerWorldGenerator(new WorldGenCustomStructures(), 0);
 		
 		BiomeInit.registerBiomes();
 		EntityInit.registerEntity();
 		RenderHandler.registerEntityRenders();
 
 		
+	}
+	
+	public static void initRegistries() {
+		SoundsHandler.registerSounds();
 	}
 	
 	@SuppressWarnings("unused")

@@ -27,7 +27,7 @@
                 {
                     "type": "item",
                     "weight": 95,
-                    "name": "tmt:ingot_tutorial",
+                    "name": "tmt:ingot_copper",
                     "functions": [
                         {
                             "function": "set_count",
@@ -40,8 +40,8 @@
                 },
                 {
                     "type": "item",
-                    "weight": 20000,
-                    "name": "tmt:sword_tutorial",
+                    "weight": 2,
+                    "name": "tmt:sword_copper",
                     "functions": [
                         {
                             "function": "set_damage",

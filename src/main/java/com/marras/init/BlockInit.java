@@ -5,6 +5,7 @@ import java.util.List;
 
 import com.marras.objects.blocks.BlockBase;
 import com.marras.objects.blocks.BlockDirts;
+import com.marras.objects.blocks.BlockSantaHat;
 import com.marras.objects.blocks.trees.BlockLeave;
 import com.marras.objects.blocks.trees.BlockLogs;
 import com.marras.objects.blocks.trees.BlockPlank;
@@ -29,6 +30,8 @@ public class BlockInit {
 	public static final Block SAPLINGS = new BlockSaplings("saplings");
 	
 	public static final Block DIRT = new BlockDirts("dirt");
+	
+	public static final Block SANTA_HAT = new BlockSantaHat("santa_hat");
 	
 
 }

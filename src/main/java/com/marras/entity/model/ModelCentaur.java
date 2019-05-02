@@ -110,33 +110,5 @@ public class ModelCentaur extends ModelBase
     	this.VillagerHead.rotateAngleY = netHeadYaw * 0.017453292F;
     	this.VillagerHead.rotateAngleX = headPitch * 0.017453292F;
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+ 
 }
