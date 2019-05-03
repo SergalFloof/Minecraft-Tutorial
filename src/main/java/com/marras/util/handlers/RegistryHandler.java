@@ -1,5 +1,6 @@
 package com.marras.util.handlers;
 
+import com.marras.Main;
 import com.marras.entity.EntityInit;
 import com.marras.init.BiomeInit;
 import com.marras.init.BlockInit;
@@ -18,6 +19,7 @@ import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.fml.common.network.NetworkRegistry;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 @EventBusSubscriber
@@ -34,6 +36,7 @@ public class RegistryHandler {
 	public static void onBlockRegister(RegistryEvent.Register<Block> event) {
 		
 		event.getRegistry().registerAll(BlockInit.BLOCKS.toArray(new Block[0]));
+		TileEntityHandler.registerTileEntitys();
 		
 	}
 	
@@ -75,6 +78,7 @@ public class RegistryHandler {
 	
 	public static void initRegistries() {
 		SoundsHandler.registerSounds();
+		NetworkRegistry.INSTANCE.registerGuiHandler(Main.instance, new GUIHandler());
 	}
 	
 	@SuppressWarnings("unused")
