@@ -1,6 +1,7 @@
 {
-    "parent": "block/leaves",
-    "textures": {
+    "parent": "block/cube_all",
+    "textures":
+    {
         "all": "tmt:blocks/leaves_aluminum"
     }
 }

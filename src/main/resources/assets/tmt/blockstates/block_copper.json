@@ -1,6 +1,5 @@
 {
-    "variants": 
-    {
+    "variants": {
         "normal": { "model": "tmt:block_copper" }
     }
 }

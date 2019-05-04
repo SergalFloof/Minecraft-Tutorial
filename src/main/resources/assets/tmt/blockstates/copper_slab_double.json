@@ -1,6 +1,0 @@
-{
-    "variants":
-    {
-        "variant=default": { "model": "tutorial:copper_slab_double" }
-    }
-}

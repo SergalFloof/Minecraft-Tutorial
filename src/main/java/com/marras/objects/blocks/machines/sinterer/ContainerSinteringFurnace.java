@@ -1,6 +1,5 @@
 package com.marras.objects.blocks.machines.sinterer;
 
-import com.marras.objects.blocks.machines.sinterer.SinteringFurnaceRecipes;
 import com.marras.objects.blocks.machines.sinterer.slot.SlotSinteringFurnaceFule;
 import com.marras.objects.blocks.machines.sinterer.slot.SlotSinteringFurnaceOutput;
 
@@ -12,18 +11,15 @@ import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-import net.minecraftforge.items.CapabilityItemHandler;
-import net.minecraftforge.items.IItemHandler;
 
-public class ContainerSinteringFurnace extends Container{
-	
+public class ContainerSinteringFurnace extends Container
+{
 	private final TileEntitySinteringFurnace tileentity;
 	private int cookTime, totalCookTime, burnTime, currentBurnTime;
 	
 	public ContainerSinteringFurnace(InventoryPlayer player, TileEntitySinteringFurnace tileentity) 
 	{
 		this.tileentity = tileentity;
-		IItemHandler handler = tileentity.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null);
 		
 		this.addSlotToContainer(new Slot(tileentity, 0, 26, 11));
 		this.addSlotToContainer(new Slot(tileentity, 1, 26, 59));
@@ -98,7 +94,7 @@ public class ContainerSinteringFurnace extends Container{
 			{		
 				Slot slot1 = (Slot)this.inventorySlots.get(index + 1);
 				
-				if(!SinteringFurnaceRecipes.getInstance().getSinteringResult(stack1, slot1.getStack()).isEmpty())
+				if(!Recipes.getInstance().getSinteringResult(stack1, slot1.getStack()).isEmpty())
 				{
 					if(!this.mergeItemStack(stack1, 0, 2, false)) 
 					{
