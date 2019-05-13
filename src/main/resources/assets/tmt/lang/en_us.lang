@@ -76,5 +76,6 @@ tile.santa_hat.name=Santa Hat
 
 itemGroup.maintab=Main Tab
 
-tile.sintering_furnace.name=Sintering Furnace
-container.sintering_furnace=Sintering Furnace
+//Containers
+container.copper_chest=Copper Chest
+container.sintering_furnace=Sinterering Furnace

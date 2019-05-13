@@ -1,0 +1,6 @@
+{
+    "variants":
+    {
+        "normal": { "model": "tmt:ore_end_copper" }
+    }
+}

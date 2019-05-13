@@ -1,0 +1,10 @@
+{
+    "variants": {
+        "facing=down":  { "model": "tmt:teleport_block", "x": 90 },
+        "facing=up":    { "model": "tmt:teleport_block", "x": 270 },
+        "facing=north": { "model": "tmt:teleport_block" },
+        "facing=south": { "model": "tmt:teleport_block", "y": 180 },
+        "facing=west":  { "model": "tmt:teleport_block", "y": 270 },
+        "facing=east":  { "model": "tmt:teleport_block", "y": 90 }
+    }
+}

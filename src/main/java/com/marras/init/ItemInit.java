@@ -5,6 +5,7 @@ import java.util.List;
 
 import com.marras.objects.armour.ArmourBase;
 import com.marras.objects.items.ItemBase;
+import com.marras.objects.tools.StaffFire;
 import com.marras.objects.tools.ToolAxe;
 import com.marras.objects.tools.ToolHoe;
 import com.marras.objects.tools.ToolPickaxe;
@@ -37,6 +38,7 @@ public class ItemInit {
 	public static final Item PICKAXE_COPPER = new ToolPickaxe("pickaxe_copper", TOOL_COPPER);
 	public static final Item SHOVEL_COPPER = new ToolShovel("shovel_copper", TOOL_COPPER);
 	public static final Item SWORD_COPPER = new ToolSword("sword_copper", TOOL_COPPER);
+	public static final Item STAFF_FIRE = new StaffFire("staff_fire");
 	
 	//Armour
 	public static final Item HELMET_COPPER = new ArmourBase("helmet_copper", ARMOUR_COPPER, 1, EntityEquipmentSlot.HEAD);

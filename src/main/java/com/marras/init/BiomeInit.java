@@ -1,6 +1,8 @@
 package com.marras.init;
 
+import com.marras.util.handlers.ConfigHandler;
 import com.marras.world.biome.BiomeCopper;
+import com.marras.world.biome.BiomeLibrary;
 
 import net.minecraft.world.biome.Biome;
 import net.minecraftforge.common.BiomeManager.BiomeEntry;
@@ -13,11 +15,12 @@ import net.minecraftforge.common.BiomeManager;
 public class BiomeInit {
 	
 	public static final Biome COPPER = new BiomeCopper();
+	public static final Biome LIBRARY_DIMENSION = new BiomeLibrary();
 	
 	public static void registerBiomes() {
 		
 		initBiome(COPPER, "Copper", BiomeType.WARM, Type.HILLS, Type.MOUNTAIN, Type.DRY);
-		
+		initBiome(LIBRARY_DIMENSION, "Library", BiomeType.WARM, Type.SPOOKY, Type.DENSE, Type.DRY);
 		
 	}
 	
@@ -28,7 +31,12 @@ public class BiomeInit {
 		System.out.println("Biome Registered");
 		BiomeDictionary.addTypes(biome, types);
 		BiomeManager.addBiome(biomeType, new BiomeEntry(biome, 10));
-		BiomeManager.addSpawnBiome(biome);
+		
+		if(ConfigHandler.spawnCopperBiomeOverworld) {
+			BiomeManager.addSpawnBiome(biome);
+			System.out.println("Biome Added");
+		}
+		
 		return biome;
 	}
 

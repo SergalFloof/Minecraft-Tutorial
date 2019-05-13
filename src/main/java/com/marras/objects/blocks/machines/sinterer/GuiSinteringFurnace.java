@@ -1,5 +1,6 @@
 package com.marras.objects.blocks.machines.sinterer;
 
+import com.marras.objects.blocks.container.ContainerSinteringFurnace;
 import com.marras.util.Reference;
 
 import net.minecraft.client.gui.inventory.GuiContainer;

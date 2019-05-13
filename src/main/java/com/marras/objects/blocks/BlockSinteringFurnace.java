@@ -1,11 +1,12 @@
-package com.marras.objects.blocks.machines.sinterer;
+package com.marras.objects.blocks;
 
 import java.util.Random;
 
 import com.marras.Main;
 import com.marras.init.BlockInit;
-import com.marras.objects.blocks.BlockBase;
+import com.marras.objects.blocks.machines.sinterer.TileEntitySinteringFurnace;
 import com.marras.util.Reference;
+import com.marras.util.handlers.ConfigHandler;
 
 import net.minecraft.block.BlockHorizontal;
 import net.minecraft.block.ITileEntityProvider;
@@ -56,7 +57,7 @@ public class BlockSinteringFurnace extends BlockBase implements ITileEntityProvi
 	public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ) {
 		if(!worldIn.isRemote) {
 			
-			playerIn.openGui(Main.instance, Reference.GUI_SINTERING_FURNACE, worldIn, pos.getX(), pos.getY(), pos.getZ());
+			playerIn.openGui(Main.instance, ConfigHandler.GUI_SINTERING_FURNACE, worldIn, pos.getX(), pos.getY(), pos.getZ());
 			
 		}
 		return true;

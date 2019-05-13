@@ -1,0 +1,12 @@
+{
+    "parent": "block/cube_directional",
+    "textures": {
+        "particle": "tmt:blocks/teleport_block_back",
+        "down": "tmt:blocks/teleport_block_side",
+        "up": "tmt:blocks/teleport_block_side",
+        "north": "tmt:blocks/teleport_block_front",
+        "east": "tmt:blocks/teleport_block_side",
+        "south": "tmt:blocks/teleport_block_back",
+        "west": "tmt:blocks/teleport_block_side"
+    }
+}

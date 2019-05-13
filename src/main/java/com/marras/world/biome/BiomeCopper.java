@@ -3,7 +3,6 @@ package com.marras.world.biome;
 import java.util.Random;
 
 import com.marras.init.BlockInit;
-import com.marras.init.BlockOres;
 import com.marras.objects.blocks.BlockDirts;
 import com.marras.objects.blocks.trees.BlockPlank;
 import com.marras.util.handlers.EnumHandler;
@@ -23,7 +22,7 @@ public class BiomeCopper extends Biome {
 		super (new BiomeProperties("Copper").setBaseHeight(1.5f).setHeightVariation(1.2f).setTemperature(0.6f).setRainDisabled().setWaterColor(16711680));
 		
 		topBlock = BlockInit.DIRT.getDefaultState().withProperty(BlockDirts.VARIANT, EnumHandler.EnumType.COPPER);
-		fillerBlock = BlockInit.ORE_OVERWORLD.getDefaultState().withProperty(BlockOres.VARIANT, EnumHandler.EnumType.COPPER);
+		fillerBlock = BlockInit.ORE_OVERWORLD_COPPER.getDefaultState();
 		
 		this.decorator.coalGen = new WorldGenMinable(BlockInit.PLANKS.getDefaultState().withProperty(BlockPlank.VARIANT, EnumHandler.EnumType.COPPER), 10);
 		

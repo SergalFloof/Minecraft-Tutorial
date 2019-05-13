@@ -1,5 +1,7 @@
-package com.marras.objects.blocks.machines.sinterer;
+package com.marras.objects.blocks.container;
 
+import com.marras.objects.blocks.machines.sinterer.SinteringFurnaceRecipes;
+import com.marras.objects.blocks.machines.sinterer.TileEntitySinteringFurnace;
 import com.marras.objects.blocks.machines.sinterer.slot.SlotSinteringFurnaceFule;
 import com.marras.objects.blocks.machines.sinterer.slot.SlotSinteringFurnaceOutput;
 
@@ -94,7 +96,7 @@ public class ContainerSinteringFurnace extends Container
 			{		
 				Slot slot1 = (Slot)this.inventorySlots.get(index + 1);
 				
-				if(!Recipes.getInstance().getSinteringResult(stack1, slot1.getStack()).isEmpty())
+				if(!SinteringFurnaceRecipes.getInstance().getSinteringResult(stack1, slot1.getStack()).isEmpty())
 				{
 					if(!this.mergeItemStack(stack1, 0, 2, false)) 
 					{

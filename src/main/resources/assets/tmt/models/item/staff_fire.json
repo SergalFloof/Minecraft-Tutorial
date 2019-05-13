@@ -1,0 +1,13 @@
+{
+    "parent": "item/handheld",
+    "textures": {
+        "layer0": "tmt:items/staff_fire"
+    },
+    "display":
+    {
+        "firstperson_righthand":
+        {
+            "translation": [-5, 0, 0]
+        }
+    }
+}

@@ -1,7 +1,0 @@
-{
-    "variants":
-    {
-        "variant=aluminum": { "model": "tmt:ore_nether_aluminum" },
-		"variant=copper": { "model": "tmt:ore_nether_copper" }
-    }
-}

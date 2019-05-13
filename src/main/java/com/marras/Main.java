@@ -1,5 +1,7 @@
 package com.marras;
 
+import java.io.File;
+
 import com.marras.proxy.CommonProxy;
 import com.marras.tabs.TutorialTab;
 import com.marras.util.Reference;
@@ -13,10 +15,12 @@ import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
 
 @Mod(modid = Reference.MODID, name = Reference.NAME, version = Reference.VERSION)
 public class Main 
 {
+	public static File config;
 	
 	public static final CreativeTabs maintab = new TutorialTab("maintab");
 	
@@ -28,19 +32,12 @@ public class Main
 	public static CommonProxy proxy;
 	
 	@EventHandler
-	public static void preInit(FMLPreInitializationEvent event) {
-		RegistryHandler.preInitRegistries();
-		
-	}
-	
+	public static void preInit(FMLPreInitializationEvent event) {RegistryHandler.preInitRegistries(event);}
 	@EventHandler
-	public static void init(FMLInitializationEvent event) {RegistryHandler.initRegistries();}
-	
+	public static void init(FMLInitializationEvent event) {RegistryHandler.initRegistries(event);}
 	@EventHandler
-	public static void postInit(FMLPostInitializationEvent event) {
-		RegistryHandler.postInitRegistries();
-	
-		
-	}
+	public static void postInit(FMLPostInitializationEvent event) {RegistryHandler.postInitRegistries(event);}
+	@EventHandler
+	public static void serveInit(FMLServerStartingEvent event) {RegistryHandler.serverRegistries(event);;}
 
 }
