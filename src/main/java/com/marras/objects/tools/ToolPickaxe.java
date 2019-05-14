@@ -19,7 +19,7 @@ public class ToolPickaxe extends ItemPickaxe implements IHasModel{
 	
 	@Override
 	public void registerModels() {
-		Main.proxy.registerItemRenderer(this, 0, "Inventory");
+		Main.proxy.registerModel(this, 0);
 		
 	}
 

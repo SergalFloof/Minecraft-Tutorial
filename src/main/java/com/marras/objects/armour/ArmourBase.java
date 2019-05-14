@@ -28,7 +28,7 @@ public class ArmourBase extends ItemArmor implements IHasModel {
 	}
 	
 	public void registerItemRenderer(Item item, int meta, String id) {
-		Main.proxy.registerItemRenderer(this, 0, "Inventory");
+		Main.proxy.registerModel(this, 0);
 	}
 
 

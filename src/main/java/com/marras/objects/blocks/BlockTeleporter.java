@@ -1,5 +1,6 @@
 package com.marras.objects.blocks;
 
+import com.marras.Main;
 import com.marras.commands.util.Teleport;
 
 import net.minecraft.block.material.Material;
@@ -13,7 +14,7 @@ import net.minecraft.world.World;
 public class BlockTeleporter extends BlockBase{
 
 	public BlockTeleporter(String name, Material material) {
-		super(name, material);
+		super(name, material,Main.maintab);
 		
 	}
 	

@@ -1,5 +1,7 @@
 package com.marras.objects.blocks;
 
+import com.marras.Main;
+
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.util.math.AxisAlignedBB;
@@ -13,7 +15,7 @@ public class BlockSantaHat extends BlockBase {
 	public BlockSantaHat(String name) {
 		
 		
-		super(name, Material.CLOTH);
+		super(name, Material.CLOTH, Main.maintab);
 		
 	}
 	

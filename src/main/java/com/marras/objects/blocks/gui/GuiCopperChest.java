@@ -1,7 +1,7 @@
 package com.marras.objects.blocks.gui;
 
 import com.marras.objects.blocks.container.ContainerCopperChest;
-import com.marras.objects.blocks.tileentity.TileEntityCopperChest;
+import com.marras.objects.blocks.tileentity.TECopperChest;
 import com.marras.util.Reference;
 
 import net.minecraft.client.gui.inventory.GuiContainer;
@@ -10,13 +10,13 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.util.ResourceLocation;
 
-public class GuiCopperChest extends GuiContainer{
-	
+public class GuiCopperChest extends GuiContainer
+{
 	private static final ResourceLocation GUI_CHEST = new ResourceLocation(Reference.MODID + ":textures/gui/copper_chest.png");
 	private final InventoryPlayer playerInventory;
-	private final TileEntityCopperChest te;
+	private final TECopperChest te;
 	
-	public GuiCopperChest(InventoryPlayer playerInventory, TileEntityCopperChest chestInventory, EntityPlayer player) 
+	public GuiCopperChest(InventoryPlayer playerInventory, TECopperChest chestInventory, EntityPlayer player) 
 	{
 		super(new ContainerCopperChest(playerInventory, chestInventory, player));
 		this.playerInventory = playerInventory;
@@ -40,5 +40,4 @@ public class GuiCopperChest extends GuiContainer{
 		this.mc.getTextureManager().bindTexture(GUI_CHEST);
 		this.drawTexturedModalRect(this.guiLeft, this.guiTop, 0, 0, this.xSize, this.ySize);
 	}
-
 }

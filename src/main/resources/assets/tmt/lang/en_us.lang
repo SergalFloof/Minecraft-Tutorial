@@ -76,6 +76,17 @@ tile.santa_hat.name=Santa Hat
 
 itemGroup.maintab=Main Tab
 
+tile.copper_chest=Copper Chest
+
 //Containers
 container.copper_chest=Copper Chest
-container.sintering_furnace=Sinterering Furnace
+container.sintering_furnace=Sinterer Furnace
+container.electric_sintering_furnace=Electric Sinterer Furnace
+container.glowstone_generator=Glowstone Generator
+container.energy_storage=Energy Storage
+
+//Machines
+tile.sintering_furnace.name=Sinterer Furnace
+tile.electric_sintering_furnace.name=Electric Sinterer Furnace
+tile.glowstone_generator.name=Glowstone Generator
+tile.energy_storage.name=Energy Storage

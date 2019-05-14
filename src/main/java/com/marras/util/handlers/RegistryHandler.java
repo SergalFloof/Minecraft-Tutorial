@@ -8,7 +8,7 @@ import com.marras.init.BlockInit;
 import com.marras.init.DimensionInit;
 import com.marras.init.ItemInit;
 import com.marras.objects.blocks.animation.RenderCopperChest;
-import com.marras.objects.blocks.tileentity.TileEntityCopperChest;
+import com.marras.objects.blocks.tileentity.TECopperChest;
 import com.marras.util.compat.OreDictionaryCompat;
 import com.marras.util.interfaces.IHasModel;
 import com.marras.world.gen.WorldGenCustomOres;
@@ -47,7 +47,7 @@ public class RegistryHandler {
 		
 		event.getRegistry().registerAll(BlockInit.BLOCKS.toArray(new Block[0]));
 		TileEntityHandler.registerTileEntitys();
-		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityCopperChest.class, new RenderCopperChest());
+		ClientRegistry.bindTileEntitySpecialRenderer(TECopperChest.class, new RenderCopperChest());
 		
 	}
 	

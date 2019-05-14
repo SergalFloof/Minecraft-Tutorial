@@ -21,12 +21,8 @@ public class ItemBase extends Item  implements IHasModel{
 	@Override
 	public void registerModels() {
 		
-		registerItemRenderer(this, 0, "inventory");
+		Main.proxy.registerModel(this, 0);
 		
-	}
-	
-	public void registerItemRenderer(Item item, int meta, String id) {
-		Main.proxy.registerItemRenderer(this, 0, "Inventory");
 	}
 
 }

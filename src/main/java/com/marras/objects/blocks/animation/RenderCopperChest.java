@@ -1,6 +1,6 @@
 package com.marras.objects.blocks.animation;
 
-import com.marras.objects.blocks.tileentity.TileEntityCopperChest;
+import com.marras.objects.blocks.tileentity.TECopperChest;
 import com.marras.util.Reference;
 
 import net.minecraft.client.renderer.GlStateManager;
@@ -10,13 +10,13 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 @SideOnly(Side.CLIENT)
-public class RenderCopperChest extends TileEntitySpecialRenderer<TileEntityCopperChest> {
+public class RenderCopperChest extends TileEntitySpecialRenderer<TECopperChest> {
 	
 	private static final ResourceLocation TEXTURE = new ResourceLocation(Reference.MODID + ":testures/blocks/copper_chest.png");
 	private final ModelCopperChest MODEL = new ModelCopperChest();
 	
 	@Override
-	public void render(TileEntityCopperChest te, double x, double y, double z, float partialTicks, int destroyStage, float alpha) 
+	public void render(TECopperChest te, double x, double y, double z, float partialTicks, int destroyStage, float alpha) 
 	{
 		GlStateManager.enableDepth();
         GlStateManager.depthFunc(515);

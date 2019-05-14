@@ -1,6 +1,6 @@
 package com.marras.objects.blocks.container;
 
-import com.marras.objects.blocks.tileentity.TileEntityCopperChest;
+import com.marras.objects.blocks.tileentity.TECopperChest;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
@@ -8,22 +8,22 @@ import net.minecraft.inventory.Container;
 import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
 
-public class ContainerCopperChest extends Container{
-	
+public class ContainerCopperChest extends Container
+{
 	private final int numRows;
-	private final TileEntityCopperChest chestInventory;
+	private final TECopperChest chestInventory;
 	
-	public ContainerCopperChest(InventoryPlayer playerInv, TileEntityCopperChest tileEntityCopperChest, EntityPlayer player) 
+	public ContainerCopperChest(InventoryPlayer playerInv, TECopperChest tECopperChest, EntityPlayer player) 
 	{
-		this.chestInventory = tileEntityCopperChest;
-		this.numRows = tileEntityCopperChest.getSizeInventory() / 9;
-		tileEntityCopperChest.openInventory(player);
+		this.chestInventory = tECopperChest;
+		this.numRows = tECopperChest.getSizeInventory() / 9;
+		tECopperChest.openInventory(player);
 		
 		for(int i = 0; i < this.numRows; ++i)
 		{
 			for(int j = 0; j < 9; ++j)
 			{
-				this.addSlotToContainer(new Slot(tileEntityCopperChest, j + i*9, 8 + j*18, 18 + i*18));
+				this.addSlotToContainer(new Slot(tECopperChest, j + i*9, 8 + j*18, 18 + i*18));
 			}
 		}
 		
@@ -90,9 +90,8 @@ public class ContainerCopperChest extends Container{
         return itemstack;
 	}
 	
-	public TileEntityCopperChest getChestInventory()
+	public TECopperChest getChestInventory()
 	{
 		return this.chestInventory;
 	}
-
 }

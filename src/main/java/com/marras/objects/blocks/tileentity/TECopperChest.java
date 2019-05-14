@@ -16,8 +16,8 @@ import net.minecraft.util.NonNullList;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.math.AxisAlignedBB;
 
-public class TileEntityCopperChest extends TileEntityLockableLoot implements ITickable{
-
+public class TECopperChest extends TileEntityLockableLoot implements ITickable
+{
 	private NonNullList<ItemStack> chestContents = NonNullList.<ItemStack>withSize(72, ItemStack.EMPTY);
 	public int numPlayersUsing, ticksSinceSync;
 	public float lidAngle, prevLidAngle;
@@ -169,5 +169,4 @@ public class TileEntityCopperChest extends TileEntityLockableLoot implements ITi
 		this.world.addBlockEvent(pos, this.getBlockType(), 1, this.numPlayersUsing);
 		this.world.notifyNeighborsOfStateChange(pos, this.getBlockType(), false);
 	}	
-	
 }

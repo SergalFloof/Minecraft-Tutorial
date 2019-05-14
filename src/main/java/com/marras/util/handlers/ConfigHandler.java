@@ -13,8 +13,11 @@ public class ConfigHandler {
 	public static Configuration config;
 	
 	public static int ENTITY_CENTAUR = 120;
-	public static int GUI_SINTERING_FURNACE = 0;
+	public static int GUI_SINTERING_FURNACE = 1;
 	public static int GUI_COPPER_CHEST = 2;
+	public static int GUI_GLOWSTONE_GENERATOR = 3;
+	public static int GUI_ELECTRIC_SINTERING_FURNACE = 4;
+	public static int GUI_ENERGY_STORAGE = 5;
 	
 	public static boolean spawnCopperBiomeOverworld;
 	

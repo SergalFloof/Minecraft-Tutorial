@@ -3,7 +3,7 @@ package com.marras.util.compat.jei;
 import java.util.IllegalFormatException;
 
 import com.marras.objects.blocks.container.ContainerSinteringFurnace;
-import com.marras.objects.blocks.machines.sinterer.GuiSinteringFurnace;
+import com.marras.objects.blocks.gui.GuiSinteringFurnace;
 import com.marras.util.compat.jei.sinterer.SintererRecipeCategory;
 import com.marras.util.compat.jei.sinterer.SintererRecipeMaker;
 

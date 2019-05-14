@@ -1,9 +1,7 @@
 package com.marras.objects.blocks.container;
 
 import com.marras.objects.blocks.machines.sinterer.SinteringFurnaceRecipes;
-import com.marras.objects.blocks.machines.sinterer.TileEntitySinteringFurnace;
-import com.marras.objects.blocks.machines.sinterer.slot.SlotSinteringFurnaceFule;
-import com.marras.objects.blocks.machines.sinterer.slot.SlotSinteringFurnaceOutput;
+import com.marras.objects.blocks.tileentity.TESinteringFurnace;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
@@ -13,20 +11,24 @@ import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+import net.minecraftforge.items.CapabilityItemHandler;
+import net.minecraftforge.items.IItemHandler;
+import net.minecraftforge.items.SlotItemHandler;
 
 public class ContainerSinteringFurnace extends Container
 {
-	private final TileEntitySinteringFurnace tileentity;
+	private final TESinteringFurnace tileentity;
 	private int cookTime, totalCookTime, burnTime, currentBurnTime;
 	
-	public ContainerSinteringFurnace(InventoryPlayer player, TileEntitySinteringFurnace tileentity) 
+	public ContainerSinteringFurnace(InventoryPlayer player, TESinteringFurnace tileentity) 
 	{
 		this.tileentity = tileentity;
+		IItemHandler handler = tileentity.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null);
 		
-		this.addSlotToContainer(new Slot(tileentity, 0, 26, 11));
-		this.addSlotToContainer(new Slot(tileentity, 1, 26, 59));
-		this.addSlotToContainer(new SlotSinteringFurnaceFule(tileentity, 2, 7, 35));
-		this.addSlotToContainer(new SlotSinteringFurnaceOutput(player.player, tileentity, 3, 81, 36));
+		this.addSlotToContainer(new SlotItemHandler(handler, 0, 26, 11));
+		this.addSlotToContainer(new SlotItemHandler(handler, 1, 26, 59));
+		this.addSlotToContainer(new SlotItemHandler(handler, 2, 7, 35));
+		this.addSlotToContainer(new SlotItemHandler(handler, 3, 81, 36));
 		
 		for(int y = 0; y < 3; y++)
 		{
@@ -102,15 +104,15 @@ public class ContainerSinteringFurnace extends Container
 					{
 						return ItemStack.EMPTY;
 					}
-					else if(TileEntitySinteringFurnace.isItemFuel(stack1))
+					else if(TESinteringFurnace.isItemFuel(stack1))
 					{
 						if(!this.mergeItemStack(stack1, 2, 3, false)) return ItemStack.EMPTY;
 					}
-					else if(TileEntitySinteringFurnace.isItemFuel(stack1))
+					else if(TESinteringFurnace.isItemFuel(stack1))
 					{
 						if(!this.mergeItemStack(stack1, 2, 3, false)) return ItemStack.EMPTY;
 					}
-					else if(TileEntitySinteringFurnace.isItemFuel(stack1))
+					else if(TESinteringFurnace.isItemFuel(stack1))
 					{
 						if(!this.mergeItemStack(stack1, 2, 3, false)) return ItemStack.EMPTY;
 					}
